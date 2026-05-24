@@ -1,0 +1,38 @@
+name: PurpurEcoGovernor
+version: '${project.version}'
+main: com.purpur.ecogovernor.PurpurEcoGovernor
+api-version: '1.21'
+authors: [ "PurpurEcoGovernor Team" ]
+description: Ультра-оптимизированный плагин для борьбы с лагами на Paper/Purpur 1.21.
+website: "https://purpurmc.org"
+folia-supported: false
+load: POSTWORLD
+
+commands:
+  purpureco:
+    description: Главная команда PurpurEcoGovernor — открывает GUI мониторинга производительности.
+    usage: /purpureco [reload|throttle|purge|gui]
+    aliases: [peg, ecogov]
+    permission: purpureco.command
+
+permissions:
+  purpureco.*:
+    description: Полный доступ ко всем функциям плагина.
+    default: op
+    children:
+      purpureco.command: true
+      purpureco.admin: true
+      purpureco.gui: true
+      purpureco.alerts: true
+  purpureco.command:
+    description: Доступ к команде /purpureco.
+    default: op
+  purpureco.admin:
+    description: Доступ к административным функциям (reload, force throttle, purge).
+    default: op
+  purpureco.gui:
+    description: Доступ к админ-GUI производительности.
+    default: op
+  purpureco.alerts:
+    description: Получение уведомлений о перегрузке чанков.
+    default: op
