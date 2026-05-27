@@ -1,0 +1,38 @@
+# Maven build outputs
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.nextVal
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.vscode/
+bin/
+
+# Secrets, API keys, private credentials, and certificates
+.env
+.env.*
+*.key
+*.pem
+*.keystore
+*.jks
+*.pfx
+*.p12
+credentials.json
+secrets.yml
+auth.json
+token.txt
+local.properties
+/security/
+/secrets/
+/private/
